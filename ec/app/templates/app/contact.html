@@ -1,0 +1,50 @@
+{% extends 'app/base.html' %}
+{% load static %}
+{% block title %}Contact{% endblock title %}
+
+
+{% block banner_slider %}
+<div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img src="{% static 'app/images/banner/b1.jpg' %}" class="d-block w-100" alt="Banner 1">
+        </div>
+        <div class="carousel-item" data-bs-interval="10000"> <!-- 10 seconds -->
+            <img src="{% static 'app/images/banner/b2.jpg' %}" class="d-block w-100" alt="Banner 2">
+        </div>
+        <div class="carousel-item" data-bs-interval="10000">
+            <img src="{% static 'app/images/banner/b3.jpg' %}" class="d-block w-100" alt="Banner 3">
+        </div>
+        <div class="carousel-item" data-bs-interval="10000">
+            <img src="{% static 'app/images/banner/b4.jpg' %}" class="d-block w-100" alt="Banner 4">
+        </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+</div>
+
+<!-- Bootstrap JS -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+{% endblock banner_slider %}
+
+{% block main_content %}
+
+    <div class="container mt-3">
+        <br>
+        <h2 class="text-center">Contact us</h2>
+        <br>
+        <div class="row container">
+            <p class="fs-4 text-center">Address :</p>
+            <p class="fs-4 text-center">Contact :</p>
+            <p class="fs-4 text-center">Email :</p>
+        </div>
+    </div>
+
+{% endblock main_content %}
+

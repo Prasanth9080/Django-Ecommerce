@@ -1,0 +1,77 @@
+{% extends 'app/base.html' %}
+{% load static %}
+{% block title %}Category{% endblock title %}
+
+{% block main_content %}
+    <div class="container">
+        <div class="row flex justify-content-between">
+            <div class="img2 col-lg-5 mt-5">
+                <img src="{{ product.product_image.url }}" class="image col-xs-6 col-sm-12 col-lg-12 mt-3 
+                text-sm-center w-100 h-75" alt="">
+            </div>
+            <div class="productdetail col-lg-5">
+                <h6 class="mt-5 ms-3">Home / {{product.title}}</h6>
+                <h3 class="m-3">{{product.title}}</h3>
+                <h1 class="m-3">Rs.{{product.discount_price}}/-</h1>
+                <!-- <small class="text-decoration-line-through text-muted fs-5"><del>Rs.{{product.selling_price}}/-</del></small> -->
+                <br><h4 class="m-3">Product Features</h4>
+                <ul>
+                    <!-- <li>{{product.description}}</li> -->
+                    <span>
+                        A product detail page (PDP) is a web page that outlines everything customers and buyers need to
+                        know about a particular product — including information about color, sizing, material, pricing,
+                        shipping options, and more.
+                    </span>
+                </ul>
+                    <form action="/add-to-cart" class="d-inline">
+                        <input type="hidden" name="prod_id" value="{{product.id}}" />
+                        <button type="submit" class="btn btn-primary shadow px-5 py-2">Add to Cart</button>
+                    </form>
+                    <a href="{% url 'showcart' %}" class="btn btn-warning shadow px-5 py-2 ms-4">Buy Now</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- <section class="container sproduct my-5">
+        <div class="row mt-5">
+            
+            <div class="col-lg-5 col-md-12 col-sm-12">
+                <img class="img-fluid w-100 pb-1" [src]="mainImage" id="mainimg" alt="Main Image">
+            
+                <div class="small-img-group">
+                    <div class="small-img-col" *ngFor="let image of smallImages">
+                        <img [src]="image" width="100%" class="small-img" (click)="changeMainImage(image)" alt="Small Image">
+                    </div>
+                </div> 
+            </div>                
+    
+            <div class="col-lg-6 col-md-12 col-12">
+                <h6>Home / T-shirt</h6>
+                <h3 class="py-4">Men's Fashion T Shirt</h3>
+                <h2>$139.00</h2>
+                <select class="my-3">
+                    <option>Select Size</option>
+                    <option>XL</option>
+                    <option>Large</option>
+                    <option>Medium</option>
+                    <option>Small</option>
+                </select>
+                <input type="number" value="1">
+                <button class="buy-btn">Add To Cart</button>
+                <h4 class="mb-5 mt-5">Product details</h4>
+                <span>
+                    A product detail page (PDP) is a web page that outlines everything customers and buyers need to
+                     know about a particular product — including information about color, sizing, material, pricing,
+                      shipping options, and more.
+                </span>
+            </div>
+            <div>
+    
+            </div>
+        </div>
+      </section> -->
+
+
+{% endblock main_content %}
+
+

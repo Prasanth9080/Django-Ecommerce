@@ -1,0 +1,39 @@
+{% extends 'app/base.html' %}
+{% load static %}
+{% block title %}Category{% endblock title %}
+
+{% block main_content %}
+    <div class="">
+        {% for code, name in category_choices %}
+                        <a href="{% url 'category-title' code %}" class="list-group-item list-group-item-action" 
+                        aria-current="true">{{ code }}</a>
+                    {% endfor %}
+        <hr>
+        <div class="row">
+            <div class="col-lg-3 col-md-3 col-sm-3">
+                <div class="list-group">
+                    {% for value in title %}
+                    <a href="{% url 'category-title' value.title %}" class="list-group-item list-group-item-action" 
+                    aria-current="true">{{ value.title }}</a>
+                    {% endfor %}
+                </div>
+            </div>
+            <div class="col-lg-9 col-md-9 col-sm-9">
+                    {% for prod in product %}
+                        <div class="mb-4">
+                            <a href="{% url 'product-detail' prod.id %}" class="btn">
+                                <div>
+                                    <img src="{{prod.product_image.url}}" width="300px" height="200px" />
+                                    <div class="fw-bold">{{prod.title}}</div>
+                                    <div class="fw-bold text-danger">Rs.{{prod.discount_price}}/-
+                                        <small class="fw-light text-decoration-line-through">{{prod.selling_price}}/-</small>
+                                    </div>
+                                </div>
+                            </p>
+                        </div>
+                    {% endfor %}
+            </div>
+        </div>
+    </div>
+{% endblock main_content %}
+

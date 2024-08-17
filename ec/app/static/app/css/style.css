@@ -1,0 +1,40 @@
+
+.goodnessseccont img {
+    width: 100%;
+}
+
+.buttermilk {
+    background-color: #fff;
+    background-image: linear-gradient(#fff7ef, #fff);
+    padding: 10px 20px;
+    border: 1px solid #efe8e1;
+}
+
+.smbg {
+    background-color: #fff;
+    background-image: linear-gradient(#fff7ef, #fff);
+    padding: 10px 20px;
+    border: 1px solid #efe8e1;
+}
+
+.curdbgpro {
+    background-color: #fff;
+    background-image: linear-gradient(#fff7ef, #fff);
+    padding: 10px 20px;
+    border: 1px solid #efe8e1;
+}
+
+.milkpro {
+    color: #636362;
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 22px;
+    margin-bottom: 15px;
+    width: 43%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.goodnesssec a {
+    text-decoration: none;
+}
